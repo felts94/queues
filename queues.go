@@ -40,9 +40,8 @@ func (q *Queue) Dequeue() interface{} {
 		q.S = temp
 		q.Inverted = !q.Inverted
 		return elem
-	} else {
-		return q.S.Pop()
 	}
+	return q.S.Pop()
 }
 
 // NewQueuePointer create empty queue
